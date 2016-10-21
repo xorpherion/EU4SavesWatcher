@@ -16,7 +16,6 @@ namespace EU4SavesWatcher
             using (var window = new Window())
             {
                 var path = File.ReadAllLines("Settings.txt");
-                MessageBox.Show(path[0]);
                 CorruptFileChecker checker = new CorruptFileChecker(File.ReadAllLines("Settings.txt")[0]);
                 checker.OnSaveCorrupt += s =>
                 {
